@@ -205,7 +205,7 @@ def stage5():
 
     prefix_source = 'dr21'    
 
-    source_distance = ufloat(1400, 0) # distance in pc to CygnusX and uncertainty
+    source_distance = ufloat(1490.35, 104.4) # distance in pc to CygnusX and uncertainty. ufloat(1400, 0) before
 
     make_analysis(cube_path=data_path, catalog_path=catalog_path, mask_path=mask_path, prefix_source=prefix_source, prefix_emission='c18o', prefix_cube='c18o', source_distance=source_distance)
 
