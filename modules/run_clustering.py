@@ -149,7 +149,7 @@ def stage3():
     data_mom8_path_c18o = os.path.join(fits_path, f'{prefix_source}_c18o_mom8.fits')
 
     # Drop list
-    drop_list = [13]
+    drop_list = [9, 13]
 
     plot_mom8_comparison(mom_path=data_mom8_path_c18o, plots_path=plots_path, catalog_path=catalog_path, prefix_source=prefix_source, prefix_emission='c18o', dropped=False, gamma=1.0, vmin=0.0, vmax=5.0)
     catalog_mask_drop(catalog_path=catalog_path, mask_path=mask_path, drop_list=drop_list, prefix_source=prefix_source, prefix_emission='c18o')
