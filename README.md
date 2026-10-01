@@ -223,3 +223,11 @@ We proceed with the following steps:
    - The calculated physical parameters are stored in a **CSV file** located in the **`catalog/`** folder: `dr21_clumps_catalog.csv`.
    - Additionally, a **LaTeX-formatted** version of the catalog is created in the file `dr21_clumps_catalog_latex.txt`, for easier integration into LaTeX documents.
 
+## Acknowledgments & Attribution
+This project is forked and adapted from [IvTole/CygnusX_Clustering](https://github.com/IvTole/CygnusX_Clustering).
+The original codebase is licensed under the MIT License.
+
+### Modifications & Enhancements
+- Implementation of Gaia DR2 astrometric data processing using Bayesian distance estimation (based on Yan et al. 2019).
+- Error propagation integration using `uncertainties` for physical clump parameters.
+- Refactoring of analysis stages and clustering routines for DR21 in Cygnus-X.
