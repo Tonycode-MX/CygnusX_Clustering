@@ -53,7 +53,8 @@ def make_spectra(cube_path, catalog_path, mask_path, plots_path, prefix_source, 
     dfs = [] # list of dataframes for fit parameters
 
     for index in range(0,len(mask)):
-    
+
+        clump_index = catalog['index'].iloc[index]
         print(f'clump_idx = {clump_index}')
 
         x_p, y_p, n_sky = spectra_extraction(cube=cube, mask=mask[index], efficiency=efficiency)
@@ -109,7 +110,7 @@ def make_spectra(cube_path, catalog_path, mask_path, plots_path, prefix_source, 
         ax.plot(x_p, gaussian_result.best_fit, 'r')
         ax.legend(loc='upper left', fontsize=6)
 
-        clump_index += 1
+        #clump_index += 1
 
     fig_all.text(0.5, 0.08, r'V$_{\rm LSR}$', ha='center', size = 20)
     fig_all.text(0.08, 0.5, r'T$_{\rm MB}$', va='center', rotation='vertical', size=20)
